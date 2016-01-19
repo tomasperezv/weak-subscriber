@@ -10,25 +10,30 @@ var WeakSubscriber = function() {
   this._weakMap = new WeakMap();
 
   /**
-   * @type {Array} _subscribers
+   * @type {Map} _subscribers
    * @private
    */
-  this._subscribers = [];
+  this._subscribers = new Map();
 
 };
 
 /**
  * @method on
  * @param {String} eventId
- * @return {Promise}
  * @public
  */
 WeakSubscriber.prototype.on = function(eventId) {
 
-  var subscriberPromise = new Promise(function(resolve) {
-  });
+  var self = this;
 
-  return subscriberPromise;
+  return {
+    then: function(callback) {
+      if (!self._weakMap.has(callback)) {
+        self._weakMap.set(callback);
+        self._subscribers.set(callback, callback);
+      }
+    }
+  };
 };
 
 /**
@@ -38,6 +43,9 @@ WeakSubscriber.prototype.on = function(eventId) {
  * @public
  */
 WeakSubscriber.prototype.trigger = function(eventId, data) {
+  this._subscribers.forEach(function(value) {
+    value();
+  });
 };
 
 // Expose the module, it will be singleton instance
