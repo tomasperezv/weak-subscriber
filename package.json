@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npm test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/tomasperezv/weak-subscriber/issues"
   },
-  "homepage": "https://github.com/tomasperezv/weak-subscriber#readme"
+  "homepage": "https://github.com/tomasperezv/weak-subscriber#readme",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2"
+  }
 }
