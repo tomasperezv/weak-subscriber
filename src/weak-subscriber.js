@@ -43,8 +43,8 @@ WeakSubscriber.prototype.on = function(eventId) {
  * @public
  */
 WeakSubscriber.prototype.trigger = function(eventId, data) {
-  this._subscribers.forEach(function(value) {
-    value();
+  this._subscribers.forEach(function(callback) {
+    callback();
   });
 };
 
