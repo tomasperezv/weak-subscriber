@@ -13,7 +13,6 @@ var WeakSubscriber = require('weak-subscriber');
 WeakSubscriber.trigger('event-name', data);
 ```
 
-
 ```javascript
 var WeakSubscriber = require('weak-subscriber');
 WeakSubscriber
@@ -24,3 +23,7 @@ WeakSubscriber
 ```
 
 ## Tests
+
+```bash
+$ npm test
+```
