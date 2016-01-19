@@ -1,0 +1,26 @@
+{
+  "name": "weak-subscriber",
+  "version": "0.1.0",
+  "description": "A publisher subscriber system using WeakMaps and Promises.",
+  "main": "src/weak-subscriber.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomasperezv/weak-subscriber.git"
+  },
+  "keywords": [
+    "publisher",
+    "subscriber"
+  ],
+  "author": "Tomás Pérez <t@0x101.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomasperezv/weak-subscriber/issues"
+  },
+  "homepage": "https://github.com/tomasperezv/weak-subscriber#readme"
+}
