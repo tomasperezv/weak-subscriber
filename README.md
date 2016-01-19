@@ -20,9 +20,6 @@ WeakSubscriber
     .on('event-name')
     .then(function(data) {
       // We have the data
-    })
-    .catch(function(data) {
-      // We have an error
     });
 ```
 
